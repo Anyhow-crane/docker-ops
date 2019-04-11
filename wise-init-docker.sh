@@ -181,7 +181,7 @@ wise_install_docker() {
 	else
 	  echo "-----------------------"
 		echo "开始安装docker---"
-		curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+		curl -fsSL https://github.com/Anyhow-crane/docker-ops/blob/master/get-docker.sh?raw=true | bash -s docker --mirror Aliyun
 		wise_after_docker
 		if wise_command_exists docker ; then
 			echo "docker安装 - 完成！"
