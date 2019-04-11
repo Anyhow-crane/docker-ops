@@ -78,8 +78,7 @@ wise_command_exists() {
 wise_add_dns() {
 	dns=$(grep -c "nameserver 114.114.114.114" /etc/resolv.conf)
 	if [ "$dns" -eq '0' ]; then
-		$wise_bash_c "echo 'nameserver 223.5.5.5' >> /etc/resolv.conf"
-		$wise_bash_c "echo 'nameserver 223.6.6.6' >> /etc/resolv.conf"
+		$wise_bash_c "echo 'nameserver 8.8.8.8' >> /etc/resolv.conf"
 		echo "添加dns 114.114.114.114 "
 	fi
 }
