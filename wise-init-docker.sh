@@ -192,7 +192,7 @@ wise_install_docker() {
 	fi
 }
 
-wise_add_dns
+# wise_add_dns
 wise_close_selinux
 wise_open_port
 wise_add_wise
