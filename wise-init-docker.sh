@@ -1,5 +1,4 @@
 #!/bin/bash 
-set -e
 
 # 此安装文件需要centos7-64位系统
 
