@@ -44,7 +44,7 @@ echo "安装失败后，再次安装时，不要再次设置"
 #read wise_open_ports
 
 # 创建用户的名称
-wise_user_name="wiseloong"
+wise_user_name="wise"
 
 # 是否需要在工作目录创建wise的管理员用户
 # echo "-----------------------"
