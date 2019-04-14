@@ -66,7 +66,8 @@ done
 wise_daemon_file="/etc/docker/daemon.json"
 wise_daemon_data="{
   \"data-root\": \"$wise_work_path/docker\",
-  \"selinux-enabled\": false
+  \"selinux-enabled\": false,
+  \"registry-mirrors\": [\"https://registry.docker-cn.com/\"]
 }"
 
 # 判断是否有某个命令
