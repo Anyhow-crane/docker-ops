@@ -77,11 +77,16 @@ wise_command_exists() {
 
 # 添加dns
 wise_add_dns() {
-	dns=$(grep -c "nameserver 114.114.114.114" /etc/resolv.conf)
+for dns in $wise_all_params; do
+  if [ "-d" == "$dns" ]; then
+		dns=$(grep -c "nameserver 114.114.114.114" /etc/resolv.conf)
 	if [ "$dns" -eq '0' ]; then
 		$wise_bash_c "echo 'nameserver 114.114.114.114' >> /etc/resolv.conf"
 		echo "添加dns 114.114.114.114 "
 	fi
+	fi
+done
+	
 }
 
 # 关闭selinux
