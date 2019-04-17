@@ -174,7 +174,7 @@ wise_install_docker_compose() {
 	else
 	  echo "-----------------------"
 		echo "开始安装docker-compose---"
-	  $wise_bash_c "curl -L 'http://112.27.251.72:60020/docker-compose-Linux-x86_64' -o /usr/local/bin/docker-compose"
+	  $wise_bash_c "curl -L 'http://112.27.251.72:60020/docker/docker-compose-Linux-x86_64' -o /usr/local/bin/docker-compose"
 	  $wise_bash_c "chmod +x /usr/local/bin/docker-compose"
 		echo "docker-compose安装 - 完成！"
 	fi
@@ -187,7 +187,7 @@ wise_install_docker() {
 	else
 	  echo "-----------------------"
 		echo "开始安装docker---"
-		curl -fsSL https://raw.githubusercontent.com/Anyhow-crane/docker-ops/master/get-docker.sh | bash -s docker --mirror Aliyun
+		curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 		wise_after_docker
 		if wise_command_exists docker ; then
 			echo "docker安装 - 完成！"
